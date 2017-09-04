@@ -43,6 +43,7 @@ public class SeleniumInit {
 	public static String currentWindowHandle = "";// Get Current Window handle
 	public static String browserName = "";
 	public static String osName = "";
+	public String HomeDir="";
 	public static String browserVersion = "";
 	public static String browseruse = "";
 	public static String Testenvironment="";
@@ -122,7 +123,9 @@ public class SeleniumInit {
 			capability.setJavascriptEnabled(true);
 			capability.setCapability(FirefoxDriver.PROFILE, profile);
 			osName = System.getProperty("os.name");
+			HomeDir=System.getProperty("user.home");
 			System.out.println("---------OS NAme--------------+"+osName);
+			System.out.println("---------OHomeDir--------------+"+HomeDir);
 			driver = new RemoteWebDriver(remote_grid, capability);
 		} else if (targetBrowser.contains("ie8") || targetBrowser.equalsIgnoreCase("IE")) {
 			capability = DesiredCapabilities.internetExplorer();
