@@ -122,6 +122,7 @@ public class SeleniumInit {
 			capability.setJavascriptEnabled(true);
 			capability.setCapability(FirefoxDriver.PROFILE, profile);
 			osName = System.getProperty("os.name");
+			System.out.println("---------OS NAme--------------+"+osName);
 			driver = new RemoteWebDriver(remote_grid, capability);
 		} else if (targetBrowser.contains("ie8") || targetBrowser.equalsIgnoreCase("IE")) {
 			capability = DesiredCapabilities.internetExplorer();
