@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="SuiteName" verbose="10" parallel="false" thread-count="1">
+	<parameter name="selenium.host" value="localhost" />
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- <listeners>
+		<listener class-name="com.cactus.Utility.CustomReporter" />
+		<listener class-name="com.cactus.Utility.CustomReporterBuildSummary" />
+	</listeners> -->
+	
+	 <test name=" Test Case Name">
+		<classes>
+			<class name="com.Framework.Index.Index">
+				<methods>
+					<include name="DemoMethod" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+		
+</suite>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<suite name="ENG_Makret_ECF" verbose="10" parallel="tests" thread-count="1">
+<parameter name="selenium.port" value="4444" />
+<parameter name="FormFor" value="ECF" />
+<parameter name="selenium.host" value="localhost" />
+<parameter name="Market" value="ENG" />
+<listeners>
+<listener class-name="com.cactus.Utility.CustomReporter"/>
+</listeners>
+<test name="Auto-7 : Script for ECF form of ENG market"> 
+<classes>
+<class name="com.cactus.Editage.Ecf.Index.ECFIndex">
+<methods>
+<include name="ECF_Form_Of_ENG_market" />
+<include name="EOS_Dashboard_Validation" />
+</methods>
+</class>
+</classes>
+</test>
+</suite>
