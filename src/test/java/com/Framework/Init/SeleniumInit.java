@@ -74,7 +74,7 @@ public class SeleniumInit {
 			testUrl=Testenvironment+"."+Url;
 			
 		}
-		System.out.println("---------TestURL :"+testUrl);
+		
 	}
 	/**
 	 * WebDriver initialization
@@ -164,7 +164,6 @@ public class SeleniumInit {
 			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 			osName = capability.getPlatform().name();
 			driver = new RemoteWebDriver(remote_grid, capability);
-			
 			// driver= new ChromeDriver();
 		} else if (targetBrowser.contains("safari")) {
 			capability = DesiredCapabilities.safari();
@@ -174,9 +173,10 @@ public class SeleniumInit {
 		}
 		suiteName = testContext.getSuite().getName();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+	/*	Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
 		browserName = caps.getBrowserName();
-		browserVersion = caps.getVersion();
+		browserVersion = caps.getVersion();*/
+		System.out.println("---------TestURL :"+testUrl);
 		driver.get(testUrl);
 		driver.manage().window().maximize();
 		currentWindowHandle = driver.getWindowHandle();

@@ -5,6 +5,11 @@ jdk:
 services:
 - selenium
 
+script:
+- sudo chmod -X /root/src/gihub.com/
+
 build:
 ci:
+- export DISPLAY=:99.0
+- xvfb-run --server-args="-ac" 
 - mvn test
