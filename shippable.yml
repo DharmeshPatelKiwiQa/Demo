@@ -5,9 +5,6 @@ jdk:
 services:
 - selenium
 
-script:
-- sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
-
 build:
 ci:
-- mvn test
+- sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver mvn test
