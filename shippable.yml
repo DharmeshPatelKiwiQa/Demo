@@ -10,5 +10,4 @@ script:
 
 build:
 ci:
-- export DISPLAY=:99.0
 - mvn test
