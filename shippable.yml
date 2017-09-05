@@ -7,4 +7,4 @@ services:
 
 build:
 ci:
-- mvn clean test
+- mvn test
