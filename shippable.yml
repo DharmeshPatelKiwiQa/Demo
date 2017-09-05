@@ -7,5 +7,4 @@ services:
 
 build:
 ci:
-- sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
 - mvn test

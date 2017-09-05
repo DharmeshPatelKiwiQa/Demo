@@ -159,6 +159,10 @@ public class SeleniumInit {
 			File driverpath = new File("Resource/chromedriver");
 			String path1 = driverpath.getAbsolutePath();
 			System.out.println("+++++++++Chrome driver no path che :" +path1);
+			 try {
+			        Process p =  Runtime.getRuntime().exec("sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver") ;           
+			    } catch (IOException ex) {
+			    }
 			System.setProperty("webdriver.chrome.driver", path1);
 			capability.setBrowserName("chrome");
 			capability.setJavascriptEnabled(true);
