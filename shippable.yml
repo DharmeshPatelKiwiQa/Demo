@@ -5,11 +5,7 @@ jdk:
 services:
 - selenium
 
-script:
-- sudo chmod -X root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
-
 build:
 ci:
 - export DISPLAY=:99.0
-- sh selenium.sh
 - mvn test
