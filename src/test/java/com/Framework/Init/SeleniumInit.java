@@ -156,8 +156,9 @@ public class SeleniumInit {
 			driver = new RemoteWebDriver(remote_grid, capability);
 		} else if (targetBrowser.contains("chrome") || targetBrowser.equalsIgnoreCase("chrome")) {
 			capability = DesiredCapabilities.chrome();
-			File driverpath = new File("/Resource/chromedriver.exe");
+			File driverpath = new File("/Resource/chromedriver");
 			String path1 = driverpath.getAbsolutePath();
+			System.out.println("+++++++++Chrome driver no path che :" +path1);
 			System.setProperty("webdriver.chrome.driver", path1);
 			capability.setBrowserName("chrome");
 			capability.setJavascriptEnabled(true);

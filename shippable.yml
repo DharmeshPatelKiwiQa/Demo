@@ -6,10 +6,10 @@ services:
 - selenium
 
 script:
-- sudo chmod -X /root/src/gihub.com/
+- sudo chmod -X root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
 
 build:
 ci:
 - export DISPLAY=:99.0
-- xvfb-run --server-args="-ac" 
+- sh selenium.sh
 - mvn test
