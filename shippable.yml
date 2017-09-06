@@ -7,5 +7,8 @@ services:
 
 build:
 ci:
+- sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
+- sudo mvn -version
+- sudo mvn install
 - "export DISPLAY=:99.0"
 - xvfb-run --server-args="-ac" mvn test
