@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="SuiteName" verbose="10" parallel="false" thread-count="1">
 	<parameter name="selenium.host" value="127.0.0.1" />
 	<parameter name="selenium.port" value="4444" />
