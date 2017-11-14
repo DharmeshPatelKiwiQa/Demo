@@ -12,6 +12,7 @@ public class Index extends SeleniumInit{
 	{
 		Common.pause(3);
 		System.out.println("Script Done");
+		Common.log("========  Script Done   ==========");
 	}
 
 }
