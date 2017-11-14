@@ -7,7 +7,7 @@ services:
 
 build:
 ci:
-- sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
+- sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/src/test/resources/chromedriver
 - sudo mvn -version
 - sudo mvn install
 - "export DISPLAY=:99.0"
