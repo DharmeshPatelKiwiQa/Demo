@@ -161,7 +161,7 @@ public class SeleniumInit {
 			capability = DesiredCapabilities.chrome();
 			File driverpath = new File("Resource/chromedriver");
 			String path1 = driverpath.getAbsolutePath();
-			System.out.println("+++++++++Chrome driver no path che :" +path1);
+			System.out.println("+++++++++Chrome driver path:" +path1);
 			
 			System.setProperty("webdriver.chrome.driver", path1);
 			capability.setBrowserName("chrome");

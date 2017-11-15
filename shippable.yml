@@ -7,6 +7,7 @@ services:
 
 build:
 ci:
+- sudo ls -l /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
 - sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
 - sudo mvn -version
 - sudo mvn install

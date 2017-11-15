@@ -1,5 +1,6 @@
 package com.Framework.Index;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.Framework.Init.Common;
@@ -13,6 +14,7 @@ public class Index extends SeleniumInit{
 		Common.pause(3);
 		System.out.println("Script Done");
 		Common.log("========  Script Done   ==========");
+		
 	}
 
 }
