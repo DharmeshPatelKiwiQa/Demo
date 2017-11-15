@@ -14,6 +14,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -165,14 +166,18 @@ public class SeleniumInit {
 			System.out.println("+++++++++Chrome driver path:" +path1);
 			
 			System.setProperty("webdriver.chrome.driver", "/root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver");
+			final ChromeOptions chromeOptions = new ChromeOptions();
+			//chromeOptions.setBinary("/usr/bin/chromium-browser");
+			chromeOptions.addArguments("--headless");
 			capability.setBrowserName("chrome");
+			capability.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 			capability.setJavascriptEnabled(true);
 			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 			osName = capability.getPlatform().name();
 			//driver = .Chrome("/root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver");
 
-		//	driver = new RemoteWebDriver(remote_grid, capability);
-		 driver= new ChromeDriver();
+		//driver = new RemoteWebDriver(remote_grid, capability);
+		 driver= new ChromeDriver(capability);
 		} else if (targetBrowser.contains("safari")) {
 			capability = DesiredCapabilities.safari();
 			capability.setJavascriptEnabled(true);
