@@ -1,15 +1,15 @@
 language: java
 jdk:
-- openjdk8
+  - openjdk8
 
 services:
-- selenium
+  - selenium
 
 build:
-ci:
-- sudo ls -l /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
-- sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
-- sudo mvn -version
-- sudo mvn install
-- "export DISPLAY=:99.0"
-- xvfb-run --server-args="-ac" mvn test
+  ci:
+    - ls -l /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
+    - sudo chmod +X /root/src/github.com/DharmeshPatelKiwiQa/Demo/Resource/chromedriver
+    - sudo mvn -version
+    - sudo mvn install
+    - "export DISPLAY=:99.0"
+    - xvfb-run --server-args="-ac" mvn test
